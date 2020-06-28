@@ -12,11 +12,16 @@ body {
 
 .navigation {
     position: fixed;
+    top: 0;
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 40px 100px;
-    transition: all 0.5s ease-in-out;
+    /* padding: 40px 100px; */
+    transition: all 0.3s ease-in-out;
+
+    /* Can achieve similar effect with reducing line-height instead of reducing padding - see .sticky */
+    line-height: 90px;
+    padding: 0 100px;
 }
 
 .navigation * {
@@ -58,7 +63,11 @@ body {
 
 .sticky {
     background-color: white;
-    padding: 10px 100px;
+    /* padding: 10px 100px; */
+
+    /* reduce line-height instead of reducing padding */
+    line-height: 60px; 
+    padding: 0 100px;
 }
 
 .sticky .logo,
