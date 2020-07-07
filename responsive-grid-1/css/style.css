@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.container {
+  max-width: 960px;
+  margin: 4rem auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(2, minmax(200px, min-content));
+  grid-gap: 1rem;
+}
+
+.container > * {
+  padding: 1.5rem;
+}
+
+.item--1 {
+  background-color: orangered;
+}
+
+.item--2 {
+  background-color: violet;
+}
+
+.item--3 {
+  background-color: mediumaquamarine;
+}
+
+.item--4 {
+  background-color: maroon;
+}
+
+.item--5 {
+  background-color: cadetblue;
+}
+
+.item--6 {
+  background-color: lightcoral;
+}
+
+.item--7 {
+  background-color: slateblue;
+}
+
+.item--8 {
+  background-color: darkgrey;
+}
