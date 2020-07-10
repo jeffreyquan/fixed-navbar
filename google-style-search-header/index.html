@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Google Style Search Header</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="search">
+        <h4 class="logo">Google</h4>
+        <input class="searchbar" name="search" />
+      </div>
+    </header>
+    <div class="container">
+      <div class="toolbar"></div>
+    </div>
+
+    <script>
+      const search = document.querySelector(".search");
+
+      document.addEventListener("scroll", () => {
+        let top = window.getComputedStyle(search).top;
+        let topInt = parseInt(top, 10);
+        if (window.scrollY > 136) {
+          search.classList.add("minidiv");
+          if (topInt < 0) {
+            console.log(topInt);
+            topInt += 4;
+            search.style["top"] = `${topInt}px`;
+          }
+        } else {
+          search.classList.remove("minidiv");
+          search.style.top = null;
+        }
+      });
+    </script>
+  </body>
+</html>
