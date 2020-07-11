@@ -21,7 +21,8 @@ body {
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: repeat(2, minmax(200px, min-content));
+  grid-auto-rows: minmax(15rem, min-content);
+  /* grid-template-rows: repeat(2, minmax(200px, min-content)); */
   grid-gap: 1rem;
 }
 
